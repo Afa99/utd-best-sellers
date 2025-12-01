@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Best sellers section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <section class="best-sellers" aria-labelledby="best-sellers-title">
+    <div class="best-sellers__inner container">
+      <!-- LEFT COLUMN -->
+      <div class="best-sellers__left">
+        <p class="best-sellers__eyebrow">Best sellers</p>
+        <h2 class="best-sellers__title" id="best-sellers-title">
+          Trending Products
+        </h2>
+
+        <ul class="best-sellers__collections" aria-label="Product collections">
+          <li class="best-sellers__collections-item">
+            <button
+              class="best-sellers__collection best-sellers__collection--active"
+              type="button"
+              data-collection="collection-1"
+              aria-selected="true"
+            >
+              <span class="best-sellers__collection-name">Mantra Rings</span>
+              <span class="best-sellers__collection-arrow" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li class="best-sellers__collections-item">
+            <button
+              class="best-sellers__collection"
+              type="button"
+              data-collection="collection-2"
+              aria-selected="false"
+            >
+              <span class="best-sellers__collection-name">CharityBands®</span>
+              <span class="best-sellers__collection-arrow" aria-hidden="true">→</span>
+            </button>
+          </li>
+          <li class="best-sellers__collections-item">
+            <button
+              class="best-sellers__collection"
+              type="button"
+              data-collection="collection-3"
+              aria-selected="false"
+            >
+              <span class="best-sellers__collection-name">Statement Collection</span>
+              <span class="best-sellers__collection-arrow" aria-hidden="true">→</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT COLUMN / PRODUCT CARD -->
+      <div class="best-sellers__right">
+        <article class="product-card" data-product-id="#">
+          <!-- IMAGE LINK -->
+          <a href="#" class="product-card__image-link">
+            <picture class="product-card__picture">
+              <source
+                data-picture-size="mobile"
+                media="(max-width: 420px)"
+                srcset="./images/imgM.png"
+              />
+              <source
+                data-picture-size="tablet"
+                media="(max-width: 991px)"
+                srcset="./images/imgT.png"
+              />
+              <source
+                data-picture-size="desktop"
+                media="(min-width: 992px)"
+                srcset="./images/imgT.png"
+              />
+              <img
+                class="product-card__image"
+                src="./images/imgT.png"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+
+          <!-- BADGES -->
+          <div class="product-card__badges"></div>
+
+          <!-- ICON BUTTONS (heart + eye) -->
+          <div class="product-card__icons">
+            <button
+              class="product-card__icon-btn product-card__icon-btn--heart"
+              type="button"
+              aria-label="Add to wishlist"
+            >
+              ♥
+            </button>
+
+            <button
+              class="product-card__icon-btn product-card__icon-btn--quick-view"
+              type="button"
+              aria-label="Quick view"
+            >
+              👁
+            </button>
+          </div>
+
+          <!-- BOTTOM PANEL (name + prices) -->
+          <a href="#" class="product-card__panel">
+            <div class="product-card__panel-content">
+              <span class="product-card__name"></span>
+              <div class="product-card__price-row">
+                <span class="product-card__price"></span>
+                <span class="product-card__old-price"></span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+
+    <!-- OVERLAY + MODAL -->
+    <div class="best-sellers__overlay" data-popup-overlay></div>
+
+    <div
+      class="best-sellers__modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="best-sellers-modal-title"
+    >
+      <button
+        class="best-sellers__modal-close"
+        type="button"
+        aria-label="Close popup"
+      >
+        ✕
+      </button>
+
+      <p
+        class="best-sellers__modal-text"
+        id="best-sellers-modal-title"
+      ></p>
+    </div>
+  </section>
+  
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
